@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "SSIS_Movilidad2020", "SSIS_Movilidad2020\SSIS_Movilidad2020.dtproj", "{5ACF9E5A-1074-4714-16C1-83DC72782A93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ACF9E5A-1074-4714-16C1-83DC72782A93}.Development|Default.ActiveCfg = Development
+		{5ACF9E5A-1074-4714-16C1-83DC72782A93}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1783DD5B-7CF1-4B3F-8EB4-79112BCAB5D5}
+	EndGlobalSection
+EndGlobal

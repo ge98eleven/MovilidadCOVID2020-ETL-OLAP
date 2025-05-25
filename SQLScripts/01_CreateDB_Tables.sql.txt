@@ -1,0 +1,7 @@
+CREATE DATABASE MovilidadCOVID;
+GO
+USE MovilidadCOVID;
+GO
+CREATE TABLE dbo.DimFecha ( … );
+CREATE TABLE dbo.DimRegion ( … );
+CREATE TABLE dbo.FactMovilidad ( … );
