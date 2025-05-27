@@ -6,10 +6,59 @@
     <Name>SSAS_Movilidad2020_Cubo.database</Name>
     <FullPath>SSAS_Movilidad2020_Cubo.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Movilidad COVID.cube</Name>
+      <FullPath>Movilidad COVID.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Movilidad COVID.partitions</Name>
+          <FullPath>Movilidad COVID.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Dim Fecha.dim</Name>
+      <FullPath>Dim Fecha.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Dim Region.dim</Name>
+      <FullPath>Dim Region.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Movilidad COVID.ds</Name>
+      <FullPath>Movilidad COVID.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Movilidad COVID.dsv</Name>
+      <FullPath>Movilidad COVID.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Movilidad COVID</Id>
+            <Name>Movilidad COVID</Name>
+            <Value xsi:type="xsd:string">Provider=MSOLEDBSQL.1;Data Source=DESKTOP-JJMANNE;Integrated Security=SSPI;Initial Catalog=MovilidadCOVID</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Movilidad COVID</Id>
+            <Name>Movilidad COVID</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>

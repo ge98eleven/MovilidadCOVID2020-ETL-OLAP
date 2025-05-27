@@ -1,12 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Gerardo\\Documents\\Datawarehouse\\Desafio 2\\SSASModel\\SSAS_Movilidad2020_Cubo\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B747470E-EBE1-5CB5-5BB1-23602A4AE094}|SSAS_Movilidad2020_Cubo\\SSAS_Movilidad2020_Cubo.dwproj|C:\\Users\\Gerardo\\Documents\\Datawarehouse\\Desafio 2\\SSASModel\\SSAS_Movilidad2020_Cubo\\SSAS_Movilidad2020_Cubo\\Movilidad COVID.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{B747470E-EBE1-5CB5-5BB1-23602A4AE094}|SSAS_Movilidad2020_Cubo\\SSAS_Movilidad2020_Cubo.dwproj|solutionrelative:SSAS_Movilidad2020_Cubo\\Movilidad COVID.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Movilidad COVID.cube [Design]",
+              "DocumentMoniker": "C:\\Users\\Gerardo\\Documents\\Datawarehouse\\Desafio 2\\SSASModel\\SSAS_Movilidad2020_Cubo\\SSAS_Movilidad2020_Cubo\\Movilidad COVID.cube",
+              "RelativeDocumentMoniker": "SSAS_Movilidad2020_Cubo\\Movilidad COVID.cube",
+              "ToolTip": "C:\\Users\\Gerardo\\Documents\\Datawarehouse\\Desafio 2\\SSASModel\\SSAS_Movilidad2020_Cubo\\SSAS_Movilidad2020_Cubo\\Movilidad COVID.cube [Design]",
+              "RelativeToolTip": "SSAS_Movilidad2020_Cubo\\Movilidad COVID.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-27T08:37:29.233Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
