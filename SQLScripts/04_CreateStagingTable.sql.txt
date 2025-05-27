@@ -1,0 +1,29 @@
+USE MovilidadCOVID;
+GO
+
+-- =====================================================
+-- 04_CreateStagingTable.sql
+-- Crea tabla staging para la carga inicial desde el CSV
+-- =====================================================
+IF OBJECT_ID('dbo.StgMobility', 'U') IS NOT NULL
+  DROP TABLE dbo.StgMobility;
+GO
+
+CREATE TABLE dbo.StgMobility (
+  country_region_code                             VARCHAR(10),
+  country_region                                  VARCHAR(100),
+  sub_region_1                                    VARCHAR(100),
+  sub_region_2                                    VARCHAR(100),
+  metro_area                                      VARCHAR(100),
+  iso_3166_2_code                                 VARCHAR(10),
+  census_fips_code                                VARCHAR(10),
+  place_id                                        VARCHAR(50),
+  [date]                                          DATE NOT NULL;
+  retail_and_recreation_percent_change_from_baseline DECIMAL(5,2),
+  grocery_and_pharmacy_percent_change_from_baseline   DECIMAL(5,2),
+  parks_percent_change_from_baseline                 DECIMAL(5,2),
+  transit_stations_percent_change_from_baseline      DECIMAL(5,2),
+  workplaces_percent_change_from_baseline            DECIMAL(5,2),
+  residential_percent_change_from_baseline           DECIMAL(5,2)
+);
+GO

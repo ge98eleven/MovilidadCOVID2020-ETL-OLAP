@@ -1,0 +1,32 @@
+USE MovilidadCOVID;
+GO
+
+-- =====================================================
+-- 03_PopulateDimFecha.sql
+-- Inserta fechas de 2020 en DimFecha
+-- =====================================================
+
+SET NOCOUNT ON;
+
+-- Elimina cualquier dato previo (si estás rehaciendo)
+DELETE FROM dbo.DimFecha;
+GO
+
+;WITH Calendario AS (
+  SELECT CAST('2020-01-01' AS DATE) AS Fecha
+  UNION ALL
+  SELECT DATEADD(DAY, 1, Fecha)
+  FROM Calendario
+  WHERE Fecha < '2020-12-31'
+)
+INSERT INTO dbo.DimFecha (FechaID, Año, Mes, Día, Trimestre, DíaSemana)
+SELECT
+  Fecha                              AS FechaID,
+  YEAR(Fecha)                        AS Año,
+  MONTH(Fecha)                       AS Mes,
+  DAY(Fecha)                         AS Día,
+  DATEPART(QUARTER, Fecha)          AS Trimestre,
+  DATENAME(WEEKDAY, Fecha)           AS DíaSemana
+FROM Calendario
+OPTION (MAXRECURSION 366);
+GO

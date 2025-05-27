@@ -1,0 +1,51 @@
+USE MovilidadCOVID;
+GO
+
+-- =====================================================
+-- 02_CreateTables.sql
+-- Definición de tablas DimFecha, DimRegion y FactMovilidad
+-- =====================================================
+
+-- Dimensión Fecha
+IF OBJECT_ID('dbo.DimFecha','U') IS NOT NULL
+  DROP TABLE dbo.DimFecha;
+GO
+CREATE TABLE dbo.DimFecha (
+  FechaID    DATE       NOT NULL PRIMARY KEY,
+  Año        INT        NOT NULL,
+  Mes        INT        NOT NULL,
+  Día        INT        NOT NULL,
+  Trimestre  INT        NOT NULL
+);
+GO
+
+-- Dimensión Región
+IF OBJECT_ID('dbo.DimRegion','U') IS NOT NULL
+  DROP TABLE dbo.DimRegion;
+GO
+CREATE TABLE dbo.DimRegion (
+  RegionID     INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+  NombreRegion VARCHAR(100)      NOT NULL UNIQUE
+);
+GO
+
+-- Tabla de Hechos
+IF OBJECT_ID('dbo.FactMovilidad','U') IS NOT NULL
+  DROP TABLE dbo.FactMovilidad;
+GO
+CREATE TABLE dbo.FactMovilidad (
+  FactID           INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+  FechaID          DATE              NOT NULL 
+                     CONSTRAINT FK_FactMovilidad_DimFecha 
+                       REFERENCES dbo.DimFecha(FechaID),
+  RegionID         INT               NOT NULL 
+                     CONSTRAINT FK_FactMovilidad_DimRegion 
+                       REFERENCES dbo.DimRegion(RegionID),
+  ParksPct         DECIMAL(5,2)      NOT NULL,
+  RetailRecPct     DECIMAL(5,2)      NOT NULL,
+  GroceryPharmPct  DECIMAL(5,2)      NOT NULL,
+  TransitPct       DECIMAL(5,2)      NOT NULL,
+  WorkplacesPct    DECIMAL(5,2)      NOT NULL,
+  ResidentialPct   DECIMAL(5,2)      NOT NULL
+);
+GO

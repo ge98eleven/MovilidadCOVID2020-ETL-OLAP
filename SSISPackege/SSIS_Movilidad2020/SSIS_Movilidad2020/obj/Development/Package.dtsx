@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="5/25/2025 4:55:47 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="78"
-  DTS:VersionGUID="{340DAABE-551C-478C-B344-0AA8C5811F7C}">
+  DTS:VersionBuild="77"
+  DTS:VersionGUID="{0E8A5A78-B7AA-401B-A215-B9E75586C6C4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3454,7 +3454,7 @@ where [refTable].[NombreRegion] = ?</property>
         <NodeLayout
           Size="196,42"
           Id="Package\DFT_Load_FactMovilidad"
-          TopLeft="475,429" />
+          TopLeft="474,429" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
