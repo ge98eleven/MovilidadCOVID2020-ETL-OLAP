@@ -11,8 +11,8 @@
   DTS:LocaleID="2058"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="78"
-  DTS:VersionGUID="{340DAABE-551C-478C-B344-0AA8C5811F7C}">
+  DTS:VersionBuild="111"
+  DTS:VersionGUID="{50485CF3-A661-489F-913B-F64456EC7568}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -916,26 +916,27 @@
                   synchronousInputId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Outputs[Derived Column Output].Columns[CleanRegion]"
-                      dataType="wstr"
+                      refId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Outputs[Derived Column Output].Columns[RegionKey]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       length="100"
-                      lineageId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Outputs[Derived Column Output].Columns[CleanRegion]"
-                      name="CleanRegion"
+                      lineageId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Outputs[Derived Column Output].Columns[RegionKey]"
+                      name="RegionKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE](#{Package\DFT_Load_FactMovilidad\OLE DB Source.Outputs[OLE DB Source Output].Columns[sub_region_1]},"AhuachapÃ¡n","Ahuachapán"),"CabaÃ±as","Cabañas"),"CuscatlÃ¡n","Cuscatlán"),"UniÃ³n","Unión"),"MorazÃ¡n","Morazán"),"UsulutÃ¡n","Usulután"),#{Package\DFT_Load_FactMovilidad\OLE DB Source.Outputs[OLE DB Source Output].Columns[sub_region_1]},#{Package\DFT_Load_FactMovilidad\OLE DB Source.Outputs[OLE DB Source Output].Columns[sub_region_1]})</property>
+                          name="Expression">(DT_STR,100,1252)[REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([REPLACE]([TRIM](#{Package\DFT_Load_FactMovilidad\OLE DB Source.Outputs[OLE DB Source Output].Columns[sub_region_1]})," Department",""),"AhuachapÃ¡n","Ahuachapán"),"CabaÃ±as","Cabañas"),"CuscatlÃ¡n","Cuscatlán"),"UniÃ³n","Unión"),"MorazÃ¡n","Morazán"),"UsulutÃ¡n","Usulután")</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(sub_region_1,"AhuachapÃ¡n","Ahuachapán"),"CabaÃ±as","Cabañas"),"CuscatlÃ¡n","Cuscatlán"),"UniÃ³n","Unión"),"MorazÃ¡n","Morazán"),"UsulutÃ¡n","Usulután"),sub_region_1,sub_region_1)</property>
+                          name="FriendlyExpression">(DT_STR,100,1252)REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(TRIM(sub_region_1)," Department",""),"AhuachapÃ¡n","Ahuachapán"),"CabaÃ±as","Cabañas"),"CuscatlÃ¡n","Cuscatlán"),"UniÃ³n","Unión"),"MorazÃ¡n","Morazán"),"UsulutÃ¡n","Usulután")</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -999,12 +1000,12 @@
                   synchronousInputId="Package\DFT_Load_FactMovilidad\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output].Columns[FechaKeyInt]"
+                      refId="Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output].Columns[FechaKey]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output].Columns[FechaKeyInt]"
-                      name="FechaKeyInt"
+                      lineageId="Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output].Columns[FechaKey]"
+                      name="FechaKey"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1105,7 +1106,7 @@ where [refTable].[FechaKeyInt] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output].Columns[FechaKeyInt]};</property>
+                  name="ParameterMap">#{Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output].Columns[FechaKey]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1129,10 +1130,10 @@ where [refTable].[FechaKeyInt] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_Load_FactMovilidad\Lookup.Inputs[Lookup Input].Columns[FechaKeyInt]"
+                      refId="Package\DFT_Load_FactMovilidad\Lookup.Inputs[Lookup Input].Columns[FechaKey]"
                       cachedDataType="i4"
-                      cachedName="FechaKeyInt"
-                      lineageId="Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output].Columns[FechaKeyInt]">
+                      cachedName="FechaKey"
+                      lineageId="Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output].Columns[FechaKey]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1158,11 +1159,11 @@ where [refTable].[FechaKeyInt] = ?</property>
                   synchronousInputId="Package\DFT_Load_FactMovilidad\Lookup.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_FactMovilidad\Lookup.Outputs[Lookup Match Output].Columns[FechaKeyInt_LKP]"
+                      refId="Package\DFT_Load_FactMovilidad\Lookup.Outputs[Lookup Match Output].Columns[FechaKey_LKP]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\DFT_Load_FactMovilidad\Lookup.Outputs[Lookup Match Output].Columns[FechaKeyInt_LKP]"
-                      name="FechaKeyInt_LKP"
+                      lineageId="Package\DFT_Load_FactMovilidad\Lookup.Outputs[Lookup Match Output].Columns[FechaKey_LKP]"
+                      name="FechaKey_LKP"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1263,7 +1264,7 @@ where [refTable].[NombreRegion] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\DFT_Load_FactMovilidad\OLE DB Source.Outputs[OLE DB Source Output].Columns[sub_region_1]};</property>
+                  name="ParameterMap">#{Package\DFT_Load_FactMovilidad\DC_Rename_Region.Outputs[Derived Column Output].Columns[RegionKey]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1287,12 +1288,12 @@ where [refTable].[NombreRegion] = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\DFT_Load_FactMovilidad\Lookup 1.Inputs[Lookup Input].Columns[sub_region_1]"
+                      refId="Package\DFT_Load_FactMovilidad\Lookup 1.Inputs[Lookup Input].Columns[RegionKey]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
-                      cachedName="sub_region_1"
-                      lineageId="Package\DFT_Load_FactMovilidad\OLE DB Source.Outputs[OLE DB Source Output].Columns[sub_region_1]">
+                      cachedName="RegionKey"
+                      lineageId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Outputs[Derived Column Output].Columns[RegionKey]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1318,13 +1319,13 @@ where [refTable].[NombreRegion] = ?</property>
                   synchronousInputId="Package\DFT_Load_FactMovilidad\Lookup 1.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_Load_FactMovilidad\Lookup 1.Outputs[Lookup Match Output].Columns[RegionKeyInt_LKP]"
+                      refId="Package\DFT_Load_FactMovilidad\Lookup 1.Outputs[Lookup Match Output].Columns[RegionID]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Copy Column"
                       length="100"
-                      lineageId="Package\DFT_Load_FactMovilidad\Lookup 1.Outputs[Lookup Match Output].Columns[RegionKeyInt_LKP]"
-                      name="RegionKeyInt_LKP"
+                      lineageId="Package\DFT_Load_FactMovilidad\Lookup 1.Outputs[Lookup Match Output].Columns[RegionID]"
+                      name="RegionID"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1489,19 +1490,19 @@ where [refTable].[NombreRegion] = ?</property>
                       externalMetadataColumnId="Package\DFT_Load_FactMovilidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ParksPct]"
                       lineageId="Package\DFT_Load_FactMovilidad\OLE DB Source.Outputs[OLE DB Source Output].Columns[parks_percent_change_from_baseline]" />
                     <inputColumn
-                      refId="Package\DFT_Load_FactMovilidad\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RegionKeyInt_LKP]"
+                      refId="Package\DFT_Load_FactMovilidad\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaKey_LKP]"
+                      cachedDataType="i4"
+                      cachedName="FechaKey_LKP"
+                      externalMetadataColumnId="Package\DFT_Load_FactMovilidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaID]"
+                      lineageId="Package\DFT_Load_FactMovilidad\Lookup.Outputs[Lookup Match Output].Columns[FechaKey_LKP]" />
+                    <inputColumn
+                      refId="Package\DFT_Load_FactMovilidad\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RegionID]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
-                      cachedName="RegionKeyInt_LKP"
+                      cachedName="RegionID"
                       externalMetadataColumnId="Package\DFT_Load_FactMovilidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
-                      lineageId="Package\DFT_Load_FactMovilidad\Lookup 1.Outputs[Lookup Match Output].Columns[RegionKeyInt_LKP]" />
-                    <inputColumn
-                      refId="Package\DFT_Load_FactMovilidad\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FechaKeyInt_LKP]"
-                      cachedDataType="i4"
-                      cachedName="FechaKeyInt_LKP"
-                      externalMetadataColumnId="Package\DFT_Load_FactMovilidad\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FechaID]"
-                      lineageId="Package\DFT_Load_FactMovilidad\Lookup.Outputs[Lookup Match Output].Columns[FechaKeyInt_LKP]" />
+                      lineageId="Package\DFT_Load_FactMovilidad\Lookup 1.Outputs[Lookup Match Output].Columns[RegionID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1866,14 +1867,14 @@ where [refTable].[NombreRegion] = ?</property>
           <paths>
             <path
               refId="Package\DFT_Load_FactMovilidad.Paths[Derived Column Output]"
-              endId="Package\DFT_Load_FactMovilidad\Lookup 1.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\DFT_Load_FactMovilidad.Paths[Derived Column Output1]"
               endId="Package\DFT_Load_FactMovilidad\Lookup.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\DFT_Load_FactMovilidad\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\DFT_Load_FactMovilidad.Paths[Derived Column Output1]"
+              endId="Package\DFT_Load_FactMovilidad\Lookup 1.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Outputs[Derived Column Output]" />
             <path
               refId="Package\DFT_Load_FactMovilidad.Paths[Lookup Match Output]"
               endId="Package\DFT_Load_FactMovilidad\DC_Rename_Region.Inputs[Derived Column Input]"
@@ -3427,6 +3428,32 @@ where [refTable].[NombreRegion] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E663DA29-327E-44D8-BFE5-A2E008AAC187}"
+      DTS:From="Package\DFT_CargaInicial_Mobility"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_Populate_DimFecha" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{03577143-CC7B-4987-81E3-2EAF9D675ED7}"
+      DTS:From="Package\DFT_Populate_DimFecha"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DFT_Populate_DimRegion" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{10E458ED-A325-4FA3-9C1A-9A657F6CB246}"
+      DTS:From="Package\DFT_Populate_DimRegion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DFT_Load_FactMovilidad" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -3438,11 +3465,15 @@ where [refTable].[NombreRegion] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="201,42"
           Id="Package\DFT_CargaInicial_Mobility"
           TopLeft="472,38" />
+        <NodeLayout
+          Size="196,42"
+          Id="Package\DFT_Load_FactMovilidad"
+          TopLeft="475,429" />
         <NodeLayout
           Size="197,42"
           Id="Package\DFT_Populate_DimFecha"
@@ -3451,10 +3482,72 @@ where [refTable].[NombreRegion] = ?</property>
           Size="201,42"
           Id="Package\DFT_Populate_DimRegion"
           TopLeft="467,296" />
-        <NodeLayout
-          Size="196,42"
-          Id="Package\DFT_Load_FactMovilidad"
-          TopLeft="475,429" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="570.5,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="568,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,98"
+              Start="0,0"
+              End="0,90.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,90.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="570.25,338">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,91"
+              Start="0,0"
+              End="0,83.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,83.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3462,7 +3555,7 @@ where [refTable].[NombreRegion] = ?</property>
     design-time-name="Package\DFT_CargaInicial_Mobility">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="170,42"
           Id="Package\DFT_CargaInicial_Mobility\FFSrc_Mobility2020"
@@ -3490,7 +3583,9 @@ where [refTable].[NombreRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3510,18 +3605,240 @@ where [refTable].[NombreRegion] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\DFT_Load_FactMovilidad">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="122,42"
+          Id="Package\DFT_Load_FactMovilidad\Lookup 1"
+          TopLeft="537.989898989899,399.505050505051" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\DFT_Load_FactMovilidad\Derived Column"
+          TopLeft="518,144" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\DFT_Load_FactMovilidad\OLE DB Source"
+          TopLeft="521,74" />
+        <NodeLayout
+          Size="113,42"
+          Id="Package\DFT_Load_FactMovilidad\Lookup"
+          TopLeft="541,227.777777777778" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DFT_Load_FactMovilidad\OLE DB Destination"
+          TopLeft="513.989898989899,498.838383838384" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\DFT_Load_FactMovilidad\DC_Rename_Region"
+          TopLeft="511.777777777778,318.777777777778" />
+        <EdgeLayout
+          Id="Package\DFT_Load_FactMovilidad.Paths[OLE DB Source Output]"
+          TopLeft="595.5,116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_FactMovilidad.Paths[Derived Column Output]"
+          TopLeft="596.25,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.7777777777778"
+              Start="0,0"
+              End="0,34.2777777777778">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.2777777777778" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_FactMovilidad.Paths[Lookup Match Output]"
+          TopLeft="598.388888888889,269.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.9999999999999"
+              Start="0,0"
+              End="0,41.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,14.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_FactMovilidad.Paths[Derived Column Output1]"
+          TopLeft="599.133838383839,360.777777777778">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.7272727272728"
+              Start="0,0"
+              End="0,31.2272727272728">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.2272727272728" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Load_FactMovilidad.Paths[Lookup Match Output1]"
+          TopLeft="599.239898989899,441.505050505051">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57.3333333333333"
+              Start="0,0"
+              End="0,49.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,19.1119791666666,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_FactMovilidad\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimRegion]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_FactMovilidad\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_FactMovilidad\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimFecha]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Load_FactMovilidad\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\DFT_Populate_DimFecha">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="193,42"
-          Id="Package\DFT_Populate_DimFecha\OLE_Src_Staging_Fecha"
-          TopLeft="478,50" />
+          Size="171,42"
+          Id="Package\DFT_Populate_DimFecha\OLE DB Destination"
+          TopLeft="484,334" />
         <NodeLayout
           Size="145,42"
           Id="Package\DFT_Populate_DimFecha\DC_CalcFecha"
           TopLeft="497,228" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\DFT_Populate_DimFecha\OLE_Src_Staging_Fecha"
+          TopLeft="478,50" />
         <NodeLayout
           Size="127,42"
           Id="Package\DFT_Populate_DimFecha\Aggregate"
@@ -3545,7 +3862,33 @@ where [refTable].[NombreRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_Populate_DimFecha.Paths[Derived Column Output]"
+          TopLeft="569.5,270">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64"
+              Start="0,0"
+              End="0,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3567,38 +3910,27 @@ where [refTable].[NombreRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\DFT_Populate_DimFecha\OLE DB Destination"
-          TopLeft="484,334" />
-        <EdgeLayout
-          Id="Package\DFT_Populate_DimFecha.Paths[Derived Column Output]"
-          TopLeft="569.5,270">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64"
-              Start="0,0"
-              End="0,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_Populate_DimFecha\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Populate_DimFecha\OLE_Src_Staging_Fecha">
     <Properties>
@@ -3660,7 +3992,9 @@ where [refTable].[NombreRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3706,7 +4040,9 @@ where [refTable].[NombreRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3728,7 +4064,9 @@ where [refTable].[NombreRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3750,7 +4088,9 @@ where [refTable].[NombreRegion] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3771,237 +4111,6 @@ where [refTable].[NombreRegion] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_Populate_DimRegion\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Populate_DimFecha\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\DFT_Load_FactMovilidad">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="150,42"
-          Id="Package\DFT_Load_FactMovilidad\OLE DB Source"
-          TopLeft="521,74" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\DFT_Load_FactMovilidad\Lookup"
-          TopLeft="542,258" />
-        <NodeLayout
-          Size="122,42"
-          Id="Package\DFT_Load_FactMovilidad\Lookup 1"
-          TopLeft="539,442" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\DFT_Load_FactMovilidad\DC_Rename_Region"
-          TopLeft="511,347" />
-        <EdgeLayout
-          Id="Package\DFT_Load_FactMovilidad.Paths[Lookup Match Output]"
-          TopLeft="598.5,300">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47"
-              Start="0,0"
-              End="0,39.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,13.9453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Load_FactMovilidad.Paths[Derived Column Output]"
-          TopLeft="599.25,389">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53"
-              Start="0,0"
-              End="0,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\DFT_Load_FactMovilidad\OLE DB Destination"
-          TopLeft="512,532" />
-        <EdgeLayout
-          Id="Package\DFT_Load_FactMovilidad.Paths[Lookup Match Output1]"
-          TopLeft="598.75,484">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48"
-              Start="0,0"
-              End="0,40.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,14.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\DFT_Load_FactMovilidad\Derived Column"
-          TopLeft="517,160" />
-        <EdgeLayout
-          Id="Package\DFT_Load_FactMovilidad.Paths[OLE DB Source Output]"
-          TopLeft="595,116">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\DFT_Load_FactMovilidad.Paths[Derived Column Output1]"
-          TopLeft="596.25,202">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,56"
-              Start="0,0"
-              End="0,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_FactMovilidad\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_FactMovilidad\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimFecha]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_FactMovilidad\Lookup 1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimRegion]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_Load_FactMovilidad\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

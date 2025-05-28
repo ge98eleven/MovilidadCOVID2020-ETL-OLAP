@@ -1,14 +1,14 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0595be4d-31a4-49b4-80f7-1c00266b593b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4eca8571-26fe-4ca2-8bc2-f99ab031ea33" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Movilidad COVID</ID>
   <Name>Movilidad COVID</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="6" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8604" scrolltop="-3827" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="26061" y="16775" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-8604" scrolltop="-3827" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="26061" y="16775" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimFecha" left="5833" top="635" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimFecha" left="5833" top="635" logicalid="6" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000f40d0000" />
             </control>
@@ -30,7 +30,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimRegion" left="178" top="7242" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3096" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimRegion" left="178" top="7242" logicalid="7" controlid="2" masterid="0" hint1="0" hint2="0" width="3096" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000180c000057070000" />
             </control>
@@ -41,7 +41,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactMovilidad" left="20" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3413" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactMovilidad" left="20" top="0" logicalid="8" controlid="3" masterid="0" hint1="0" hint2="0" width="3413" height="4842" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000550d0000ea120000" />
             </control>
@@ -52,7 +52,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3133" top="2022" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3133" top="2022" logicalid="9" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -70,7 +70,7 @@
               <point x="3433" y="2421" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="1327" top="4542" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="1327" top="4542" logicalid="10" controlid="5" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -124,118 +124,130 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="cf02f8ed-7668-446a-80d4-b6a4b1045afe">
+    <Dimension dwd:design-time-name="fa4651c7-ecf6-41fc-8b68-a4d0ef0019cd">
       <ID>Dim Fecha</ID>
       <Name>Dim Fecha</Name>
       <DimensionID>Dim Fecha</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="79e690aa-8e6b-4f1c-bad9-41a89144c765">
+        <Attribute dwd:design-time-name="ce52f649-e511-4a72-be99-4e8342980a46">
           <AttributeID>Fecha ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e5e9f6d-f8c8-46c6-a688-7b2d1b728804">
+          <AttributeID>Año</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4a94bc06-ddda-4030-8bc3-4e5c2f16f630">
+          <AttributeID>Mes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c9b01013-5c38-409c-b26a-67e938106dbd">
+          <AttributeID>Día</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="de92e23e-3a46-451f-85bb-96cdacc37bac">
+    <Dimension dwd:design-time-name="e201fb73-8b7e-4fd4-98c6-4b589600fb19">
       <ID>Dim Region</ID>
       <Name>Dim Region</Name>
       <DimensionID>Dim Region</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="07c2f452-bf76-440f-b52c-7fa67ee17eb7">
+        <Attribute dwd:design-time-name="4719f46f-7d7e-41f1-adaa-e85cbbd01aaa">
           <AttributeID>Region ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2e0ae33d-127e-46d3-8df5-a9a77b573a5d">
+          <AttributeID>Nombre Region</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="76cec1ac-6bd3-4d2d-be90-933fd00c4698">
+    <MeasureGroup dwd:design-time-name="a44e9aef-9de8-469e-8fb3-c3cf13c89715">
       <ID>Fact Movilidad</ID>
       <Name>Fact Movilidad</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
-      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <CreatedTimestamp>0001-01-01T06:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T06:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T06:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="0857fda3-fc5e-4342-be5a-0c7b89c8f3e7">
+        <Measure dwd:design-time-name="2f7a56d3-51aa-47a0-a157-397401e61873">
           <ID>Parks Pct</ID>
           <Name>Parks Pct</Name>
           <AggregateFunction>AverageOfChildren</AggregateFunction>
-          <Source dwd:design-time-name="d46c2d8a-74cd-4a97-9a62-7866905cf3bc">
+          <Source dwd:design-time-name="748b378a-4347-4843-9e55-5b2f7e208ca8">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="4f672046-8256-4598-94ff-1ac436ee237a">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="4b2f78f5-6124-4525-85bb-623e0783cd72">
               <TableID>dbo_FactMovilidad</TableID>
               <ColumnID>RetailRecPct</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="c8a6db0e-9203-439c-bc62-ad5af727deab">
+        <Measure dwd:design-time-name="26e74b0c-4d68-4f52-a66e-c444945a197d">
           <ID>Retail Rec Pct</ID>
           <Name>Retail Rec Pct</Name>
           <AggregateFunction>AverageOfChildren</AggregateFunction>
-          <Source dwd:design-time-name="bc1d3881-cef5-4a9e-ac11-908ca7c78d8f">
+          <Source dwd:design-time-name="e4070dbe-7616-4183-87cc-c15b516ff8d2">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="9faa0562-cbb8-4b58-bbbe-3add305dfd96">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="508ed668-ebc7-4d93-824e-ab76a052e792">
               <TableID>dbo_FactMovilidad</TableID>
               <ColumnID>GroceryPharmPct</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="a0af85ed-6a82-464b-87a9-6903a881eaac">
+        <Measure dwd:design-time-name="a6ad2543-9aaf-4c88-9239-c7c18ccc4e4c">
           <ID>Grocery Pharm Pct</ID>
           <Name>Grocery Pharm Pct</Name>
           <AggregateFunction>AverageOfChildren</AggregateFunction>
-          <Source dwd:design-time-name="f860b921-d6d9-4039-848c-593135e3e322">
+          <Source dwd:design-time-name="90532eca-dfea-456f-9682-4a08e4b127da">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="0d7306f9-6e68-413e-9bc8-bbaab3213bd5">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="8521ecc7-ab95-43f4-8039-debd628ee12e">
               <TableID>dbo_FactMovilidad</TableID>
               <ColumnID>GroceryPharmPct</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="12f0530f-e8a5-4f13-8f18-6c831bee8253">
+        <Measure dwd:design-time-name="7621a347-ce1d-476a-852a-f30155c24242">
           <ID>Transit Pct</ID>
           <Name>Transit Pct</Name>
           <AggregateFunction>AverageOfChildren</AggregateFunction>
-          <Source dwd:design-time-name="83755ed7-f0db-452b-88c5-e07f8425ea66">
+          <Source dwd:design-time-name="6bbdc678-e358-4819-90f1-39182186c826">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="87e27aac-5adb-4286-9195-3bcba19284fc">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="523d7d70-fbe2-4011-87d9-400ce3be50e6">
               <TableID>dbo_FactMovilidad</TableID>
               <ColumnID>TransitPct</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="b9ab1586-4993-4cb0-861f-7a8b6d02063e">
+        <Measure dwd:design-time-name="328dc641-d0d7-413a-9004-deef85aa9b54">
           <ID>Workplaces Pct</ID>
           <Name>Workplaces Pct</Name>
           <AggregateFunction>AverageOfChildren</AggregateFunction>
-          <Source dwd:design-time-name="50e281d4-dbd9-4f2d-acb6-cf6676672fe7">
+          <Source dwd:design-time-name="db51661f-01fa-4caa-ac52-239950e4c8b0">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="2a6ec8a3-9af3-49e7-807d-61402c6b1570">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9f9c4d7d-8cd4-4d05-9e90-736a5b67be54">
               <TableID>dbo_FactMovilidad</TableID>
               <ColumnID>WorkplacesPct</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="df527592-8696-4252-8f35-5044e24c5121">
+        <Measure dwd:design-time-name="0cc0aebe-5388-4279-b873-7dc1b4bbc1e4">
           <ID>Residential Pct</ID>
           <Name>Residential Pct</Name>
           <AggregateFunction>AverageOfChildren</AggregateFunction>
-          <Source dwd:design-time-name="cb44699b-152c-4e6a-ae2b-b028be7ae5d7">
+          <Source dwd:design-time-name="52045eb0-974a-456b-97e5-00f6e88b5d44">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="9e7180b7-9a70-4c5d-bf84-b52fb38acc73">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ddaa5b3f-0fbe-4cf0-bb98-c65d83faf9e3">
               <TableID>dbo_FactMovilidad</TableID>
               <ColumnID>ParksPct</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="71c66525-6505-4ecb-a3ef-c91482dadda5">
+        <Measure dwd:design-time-name="aeb3728e-343e-4147-98b1-581274489b34">
           <ID>Fact Movilidad Count</ID>
           <Name>Fact Movilidad Count</Name>
           <AggregateFunction>AverageOfChildren</AggregateFunction>
-          <Source dwd:design-time-name="3db5e258-8ef6-4082-9b48-9402bfbcfc28">
+          <Source dwd:design-time-name="3c2386d1-77b8-44b5-86d0-9a71cd129c89">
             <DataType>Double</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="39c24e64-bf61-472a-ab05-35e1ad4c4f7d">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f104da55-6d08-40d9-aa94-81d297f4380a">
               <TableID>dbo_FactMovilidad</TableID>
               <ColumnID>ParksPct</ColumnID>
             </Source>
@@ -245,15 +257,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="461bf6ad-90e8-4d68-9073-bec52537ad9c">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6a0dd2e8-3871-40e7-a88e-d3fad98a48c7">
           <CubeDimensionID>Dim Fecha</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="6d2253aa-0c34-41da-b03d-5983c8bd51b5">
+            <Attribute dwd:design-time-name="5b6a90e4-7f62-47f8-9d81-7c786b5e8714">
               <AttributeID>Fecha ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="d79e64aa-411d-476c-a0a3-820c43ed692a">
+                <KeyColumn dwd:design-time-name="25d2582c-2084-41b7-8079-35ec6e970ea9">
                   <DataType>Date</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e9d21356-bab6-4b57-8a5d-557992019d75">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cc12ce4f-10a2-48a0-a39f-190a176481bf">
                     <TableID>dbo_FactMovilidad</TableID>
                     <ColumnID>FechaID</ColumnID>
                   </Source>
@@ -263,15 +275,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="009d9b31-503a-4b24-88a2-81871dfd6714">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="898e05eb-cd5e-4c87-b24e-c804e3326c34">
           <CubeDimensionID>Dim Region</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="e97e3169-a1d1-47e7-a6b3-3aebe198c38d">
+            <Attribute dwd:design-time-name="fe041f49-4a74-471d-a14a-4688132e1110">
               <AttributeID>Region ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="cf5c49e6-d0b3-4989-8c6a-083f4c19b876">
+                <KeyColumn dwd:design-time-name="c501a0db-3c9b-4b91-8d3b-d36af22ae9bc">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f47d42b7-3eb8-4c0a-8206-dd448e8317b9">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="502dcbfe-ec2c-46bf-bb28-21d235bc9f34">
                     <TableID>dbo_FactMovilidad</TableID>
                     <ColumnID>RegionID</ColumnID>
                   </Source>
@@ -285,7 +297,7 @@
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="ff4ff761-eada-40e5-b227-ac6f30267a45">
+  <Source dwd:design-time-name="8cce976f-2e8f-415e-8752-5e6a41c1c753">
     <DataSourceViewID>Movilidad COVID</DataSourceViewID>
   </Source>
 </Cube>
